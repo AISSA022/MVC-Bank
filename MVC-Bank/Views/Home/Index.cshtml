@@ -1,0 +1,45 @@
+﻿@model MVC_Bank.Models.Balance
+@{
+    ViewBag.Title = "Home Page";
+}
+<link href="~/Content/Site.css" rel="stylesheet" />
+<div style="display:block">
+
+    <div>
+        <img src="~/Content/images/ezgif.com-gif-maker.jpg" style="width:500px;height:400px;margin-left:300px;margin-top:10px" />
+    </div>
+    <div style="margin-top:50px;display:flex;margin-left:300px">
+        
+        <div>
+            <div>
+                <button class="btn btn-primary" type="button" onclick="location.href='@Url.Action("Withdraw", "Home", new {id=Model.Id})'">Withdraw </button>
+            </div>
+            <div>
+                <button class="btn btn-primary" type="button" onclick="location.href='@Url.Action("QuickCash", "Home", new {id=Model.Id})'">Quick Cah 100$ </button>
+            </div>
+            <div>
+                <button class="btn btn-primary" type="button" onclick="location.href='@Url.Action("Balance", "Home", new {id=Model.Id})'">Balance Inquiry </button>
+            </div>
+        </div>
+        <div style="margin-left:200px">
+            <div>
+                <button class="btn btn-primary" type="button" onclick="location.href='@Url.Action("Print", "Home", new {id=Model.Id})'">Print Statment </button>
+            </div>
+            <div>
+                <button class="btn btn-primary" type="button" onclick="location.href='@Url.Action("Transfer", "Home", new {id=Model.Id})'">Transfer Funds </button>
+            </div>
+            <div>
+
+                <button class="btn btn-primary" type="button" onclick="location.href='@Url.Action("Deposite", "Home", new {id=Model.Id})'">Deposite </button>
+            </div>
+
+    @*            @using (Html.BeginForm("QuickCash", "Home", new { id = 1 }))
+                {
+                    <h3 class="button btn-default" align="center">
+                        <input type="submit" value="Activate" class="btn btn-default" />
+                    </h3>
+                }*@
+            
+        </div>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "Transfer";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Transfer Funds</h2>
+@using (Html.BeginForm("ConfTransfer", "Home", new { id = Model.Id }))
+{
+    <div style="display:block" class="form-group">
+        <div>
+            <h2 style="color:red">Account Number</h2>
+        </div>
+        <div >
+            <input type="text" id="accnumber" name="accnumber" />
+        </div>
+        <div>
+            <h2 style="color:red">Amount</h2>
+        </div>
+        <div >
+            <input type="text" id="amount" name="amount" />
+        </div>
+        <div>
+            <input style="margin-top:20px" type="submit" name="name" />
+        </div>
+
+    </div>
+}

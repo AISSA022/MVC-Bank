@@ -1,0 +1,41 @@
+﻿@model MVC_Bank.Models.Balance
+@{
+    ViewBag.Title = "Withdraw";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm("ConfWithdraw", "Home", new {id=Model.Id}))
+{
+
+    <div style="display:block" class="form-group">
+        <div>
+            <h2>Amount</h2>
+        </div>
+        <div class="col-md-10">
+            <input type="text" id="amount" name="amount" />
+        </div>
+        <div>
+            <input type="submit" name="name" />
+        </div>
+
+    </div>
+
+}
+
+@*<script>
+    function Btnclick() {
+        var amount = $("#amount").val();
+        
+    }
+    function submitForm() {
+        $.ajax({
+            URL: "Home/ConfWithdraw",
+            method: "POST",
+            data=
+            success: function (data) {
+                data = JSON.parse(data);
+                 
+            }
+            })
+    }
+</script>*@

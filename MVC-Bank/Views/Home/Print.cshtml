@@ -1,0 +1,42 @@
+﻿@model IEnumerable<MVC_Bank.Models.Info>
+@{
+    ViewBag.Title = "Print";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<table class="table">
+    <tr>
+        <th>
+            Action
+        </th>
+        <th>
+            Amount
+        </th>
+        <th>
+            Date
+        </th>
+        <th>
+            New Balance
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @item.Action
+            </td>
+            <td>
+                @item.amount
+            </td>
+            <td>
+                @item.Date
+            </td>
+            <td>
+                @item.Balance   
+            </td>
+        </tr>
+            }
+        
+    </table>
+
