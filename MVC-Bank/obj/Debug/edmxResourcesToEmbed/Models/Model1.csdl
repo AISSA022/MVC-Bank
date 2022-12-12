@@ -50,7 +50,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="Entities7" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="Entities9" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUser" />
     <EntitySet Name="Balances" EntityType="Self.Balance" />
     <EntitySet Name="Infoes" EntityType="Self.Info" />

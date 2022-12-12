@@ -1,9 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\MVC-Bank",
     "\\MVC-Bank\\Controllers"
   ],
-  "SelectedNode": "\\MVC-Bank\\Controllers\\HomeController.cs",
+  "SelectedNode": "\\MVC-Bank",
   "PreviewInSolutionExplorer": false
 }

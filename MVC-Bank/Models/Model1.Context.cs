@@ -13,10 +13,10 @@ namespace MVC_Bank.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class Entities7 : DbContext
+    public partial class Entities9 : DbContext
     {
-        public Entities7()
-            : base("name=Entities7")
+        public Entities9()
+            : base("name=Entities9")
         {
         }
     

@@ -120,7 +120,7 @@ warning 6035: The relationship 'FK_Balance_AspNetUsers' has columns that are not
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="Entities7" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="Entities9" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUser" />
           <EntitySet Name="Balances" EntityType="Self.Balance" />
           <EntitySet Name="Infoes" EntityType="Self.Info" />
@@ -134,7 +134,7 @@ warning 6035: The relationship 'FK_Balance_AspNetUsers' has columns that are not
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="Entities7">
+        <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="Entities9">
           <EntitySetMapping Name="AspNetUsers">
             <EntityTypeMapping TypeName="Model.AspNetUser">
               <MappingFragment StoreEntitySet="AspNetUsers">

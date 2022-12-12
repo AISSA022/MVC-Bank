@@ -2,6 +2,7 @@
 using MVC_Bank.Models;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
@@ -15,10 +16,10 @@ namespace MVC_Bank.Controllers
         private SqlCommand set;
 
         private DBContext _Db;*/
-        private Entities7 _Db;
+        private Entities9 _Db;
         public HomeController()
         {
-            _Db = new Entities7();
+            _Db = new Entities9();
         }
 
         
@@ -49,7 +50,7 @@ namespace MVC_Bank.Controllers
             return View(user);
         }
         [HttpPost]
-        public ActionResult ConfWithdraw(int id,int amount)
+        public ActionResult ConfWithdraw([Bind(Include = "Id,Balance1, UserName")]int id,int amount)
         {
             string username = User.Identity.GetUserName();
             var userz = _Db.Balances.FirstOrDefault(c => c.UserName == username);
@@ -74,9 +75,9 @@ namespace MVC_Bank.Controllers
                     Balance1=userz.Balance1-amount,
                 };
                 _Db.Infoes.Add(data);
-     /*           _Db.Infoes.Add(data);
-                _Db.SaveChanges();*/
-                _Db.Balances.Add(balance);
+                /*           _Db.Infoes.Add(data);
+                           _Db.SaveChanges();*/
+                _Db.Entry(balance).State = EntityState.Modified;
                 _Db.SaveChanges();
                 return RedirectToAction("Index");
                 
